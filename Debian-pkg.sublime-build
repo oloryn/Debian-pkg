@@ -1,0 +1,36 @@
+{
+    "keyfiles": ["debian/changelog"],
+    "variants": 
+    [
+        {
+            "name": "New changelog entry",
+            "working_dir": "${project_path}",
+            "shell_cmd": "dch new"
+        },
+        {
+            "name": "Build Package",
+            "working_dir": "${project_path}",
+            "shell_cmd": "dpkg-buildpackage"
+        },
+        {
+            "name": "Run Lintian",
+            "working_dir": "${project_path}/..",
+            "shell_cmd": "lintian ${project_base_name}*.changes",
+        },
+        {
+            "name": "Upload Package",
+            "working_dir": "${project_path}/..",
+            "shell_cmd": "dupload"
+        },
+        {
+            "name": "Clean package files",
+            "working_dir": "${project_path}",
+            "shell_cmd": "dh_clean"
+        },
+        {
+            "name": "Delete package files",
+            "working_dir": "${project_path}/..",
+            "shell_cmd": "rm ${project_base_name}_*"
+        }
+    ]
+}
