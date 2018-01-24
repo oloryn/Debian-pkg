@@ -31,10 +31,6 @@ up):
 This runs 'dch' to create a new entry in the changelog file.  The entry
 will show up with the text 'new' as the content, ready to be edited.
 
-* Build package
-This runs 'dpkg-buildpackage' to build the package.  The package is
-built in the parent directory of the project.
-
 * Run Lintian
 This runs 'lintian' on the generated package .changes file.
 
