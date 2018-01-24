@@ -21,6 +21,9 @@ installed.
 Projects that are debian package projects are identified by having a
 debian/changelog file in the root of the project.
 
+Doing a build (press Ctrl-B) runs 'dpkg-buildpackage'.  The package is
+built in the parent directory of the project.
+
 The following variants are provided (press Ctrl-Shift-B to bring them
 up):
 
