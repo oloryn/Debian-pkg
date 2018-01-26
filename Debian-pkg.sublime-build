@@ -1,6 +1,4 @@
 {
-    "working_dir": "${project_path}",
-    "shell_cmd": "dpkg-buildpackage",
     "keyfiles": ["debian/changelog"],
     "variants": 
     [
@@ -8,6 +6,11 @@
             "name": "New changelog entry",
             "working_dir": "${project_path}",
             "shell_cmd": "dch new"
+        },
+        {
+            "name": "Build Package",
+            "working_dir": "${project_path}",
+            "shell_cmd": "dpkg-buildpackage",
         },
         {
             "name": "Run Lintian",
