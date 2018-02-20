@@ -21,15 +21,16 @@ installed.
 Projects that are debian package projects are identified by having a
 debian/changelog file in the root of the project.
 
-Doing a build (press Ctrl-B) runs 'dpkg-buildpackage'.  The package is
-built in the parent directory of the project.
-
 The following variants are provided (press Ctrl-Shift-B to bring them
 up):
 
 * New changelog entry
 This runs 'dch' to create a new entry in the changelog file.  The entry
 will show up with the text 'new' as the content, ready to be edited.
+
+* Build package
+This runs 'dpkg-buildpackage' to build the package.  The package is
+built in the parent directory of the project.
 
 * Run Lintian
 This runs 'lintian' on the generated package .changes file.
