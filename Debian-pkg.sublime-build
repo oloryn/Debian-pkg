@@ -13,7 +13,7 @@
             "shell_cmd": "dpkg-buildpackage",
         },
         {
-            "name": "Run Lintian",
+            "name": "Lintian",
             "working_dir": "${project_path}/..",
             "shell_cmd": "lintian ${project_base_name}*.changes",
         },
